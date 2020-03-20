@@ -10,6 +10,11 @@
 #  define MAKE_UNIQUE_DEFINED 1
 #endif
 
+// Added for Basis. __cpp_lib_make_unique does not seem to be defined on OSX.
+#ifdef __APPLE__
+#  define MAKE_UNIQUE_DEFINED 1
+#endif
+
 #ifndef MAKE_UNIQUE_DEFINED
 
 //The compiler doesn't provide it, so implement it ourselves.
