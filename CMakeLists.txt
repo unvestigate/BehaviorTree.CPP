@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 2.8.12) # version on Ubuntu Trusty
 project(behaviortree_cpp_v3)
 
 if(NOT CMAKE_VERSION VERSION_LESS 3.1)
-    set(CMAKE_CXX_STANDARD 11)
+    if(APPLE)
+        set(CMAKE_CXX_STANDARD 14) # Added for Basis. We need C++14 on Apple.
+    else()
+        set(CMAKE_CXX_STANDARD 11)
+    endif()
+
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 else()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")

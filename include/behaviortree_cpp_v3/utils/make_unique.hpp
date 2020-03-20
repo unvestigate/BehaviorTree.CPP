@@ -12,7 +12,9 @@
 
 // Added for Basis. __cpp_lib_make_unique does not seem to be defined on OSX.
 #ifdef __APPLE__
+#if _LIBCPP_STD_VER > 11
 #  define MAKE_UNIQUE_DEFINED 1
+#endif
 #endif
 
 #ifndef MAKE_UNIQUE_DEFINED
