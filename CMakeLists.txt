@@ -1,4 +1,10 @@
 cmake_minimum_required(VERSION 2.8.12) # version on Ubuntu Trusty
+
+# Added for Basis.
+if(WIN32)
+  set(CMAKE_SYSTEM_VERSION 8.1 CACHE TYPE INTERNAL FORCE)
+endif()
+
 project(behaviortree_cpp_v3)
 
 if(NOT CMAKE_VERSION VERSION_LESS 3.1)
