@@ -1,4 +1,4 @@
-/*  Copyright (C) 2018-2019 Davide Faconti, Eurecat -  All Rights Reserved
+/*  Copyright (C) 2018-2020 Davide Faconti, Eurecat -  All Rights Reserved
 *
 *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 *   to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
@@ -431,11 +431,6 @@ Tree XMLParser::instantiateTree(const Blackboard::Ptr& root_blackboard)
                               output_tree,
                               root_blackboard,
                               TreeNode::Ptr() );
-
-    if( output_tree.nodes.size() > 0)
-    {
-        output_tree.root_node = output_tree.nodes.front().get();
-    }
     return output_tree;
 }
 
